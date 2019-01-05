@@ -1,1 +1,9 @@
- 
+ a.button {
+	 background-color: #556677;
+	 border-radius: 10px;
+	 color: white;	
+ }
+
+ title{
+	 color: #556677;
+ }
