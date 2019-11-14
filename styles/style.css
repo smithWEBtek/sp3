@@ -5,7 +5,7 @@ a.button {
 }
 
 .schedule-link {
-  background-color: rgb(190, 214, 190);
+  background-color: #556677;
   color: white;
   font-weight: 600;
   font-size: 16px;
@@ -13,6 +13,10 @@ a.button {
   border-radius: 12px;
   margin: 20px 0;
   width: 250px;
+}
+
+.schedule-link::hover {
+  color: blue;
 }
 
 .schedule-link:hover {
