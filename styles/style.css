@@ -23,3 +23,13 @@ a.button {
   font-weight: 1200;
   color: rgb(19, 19, 75);
 }
+
+.announcement {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.announcement-text {
+  font-size: 16px;
+  font-weight: 600;
+}
