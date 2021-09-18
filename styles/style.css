@@ -14,14 +14,13 @@ a.button {
   margin: 20px 0;
   width: 250px;
 }
-
-.schedule-link::hover {
-  color: blue;
+ 
+.main-image {
+  border-radius: 10px;
 }
 
-.schedule-link:hover {
-  font-weight: 1200;
-  color: rgb(19, 19, 75);
+.gig-image {
+  width: 12rem;
 }
 
 .announcement {
