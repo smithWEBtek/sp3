@@ -57,4 +57,5 @@ a.button {
   text-align: left;
   background-color: #556677;
   color: white;
+  width: auto;
 }
