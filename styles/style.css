@@ -59,3 +59,8 @@ a.button {
   color: white;
   width: auto;
 }
+
+.cancelled {
+  color: red;
+  font-size: large;
+}
