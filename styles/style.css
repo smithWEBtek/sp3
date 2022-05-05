@@ -1,7 +1,7 @@
 a.button {
-	background-color: #556677;
-	border-radius: 10px;
-	color: white;
+  background-color: #556677;
+  border-radius: 10px;
+  color: white;
 }
 
 .schedule-link {
@@ -40,18 +40,23 @@ a.button {
   width: 100%;
 }
 
-#gigs td, #gigs th {
-	border-radius: 10px;
+#gigs td,
+#gigs th {
+  border-radius: 10px;
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#gigs tr:nth-child(even){background-color: #f2f2f2;}
+#gigs tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-#gigs tr:hover {background-color: #ddd;}
+#gigs tr:hover {
+  background-color: #ddd;
+}
 
 #gigs th {
-	border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
