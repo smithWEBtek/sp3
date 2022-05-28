@@ -1,37 +1,32 @@
+.index-background {
+  background-image: url("../images/brad-smith-cover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-background {
+  background-image: url("../images/brad-smith-cover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 3%;
+}
+
+.headshot {
+  border-radius: 50%;
+}
+
 a.button {
   background-color: #556677;
   border-radius: 10px;
   color: white;
 }
 
-.schedule-link {
-  background-color: #556677;
+h1,
+h2,
+h3,
+h4 {
   color: white;
-  font-weight: 600;
-  font-size: 16px;
-  padding: 15px;
-  border-radius: 12px;
-  margin: 20px 0;
-  width: 250px;
-}
-
-.schedule-link::hover {
-  color: blue;
-}
-
-.schedule-link:hover {
-  font-weight: 1200;
-  color: rgb(19, 19, 75);
-}
-
-.announcement {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.announcement-text {
-  font-size: 16px;
-  font-weight: 600;
 }
 
 #gigs {
@@ -55,17 +50,72 @@ a.button {
   background-color: #ddd;
 }
 
-#gigs th {
+table {
   border-radius: 10px 10px 0 0;
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #556677;
+  background: none;
+  /* color: white; */
+  /* width: auto; */
+}
+
+td {
+  border: 1px solid rgb(254, 252, 252);
+  padding: 12px;
+  margin: 0 12px;
+}
+
+th.thead {
   color: white;
-  width: auto;
 }
 
 .cancelled {
   color: red;
   font-size: large;
 }
+
+a.title {
+  color: white;
+  display: inline;
+}
+
+h3.title {
+  color: white;
+  display: inline;
+}
+
+h4.subtitle {
+  color: white;
+  display: inline;
+  display: block;
+}
+
+em.subtitle {
+  color: white;
+  font-size: large;
+}
+
+.lessons-image {
+  border-radius: 50%;
+}
+
+.lessons-text {
+  color: white;
+}
+
+.white {
+  color: white;
+}
+
+.index-body {
+  height: 100vh;
+}
+
+.copyright {
+  margin: auto;
+}
+
+/* .gray-background {
+  background-color: rgb(129, 126, 126);
+} */
