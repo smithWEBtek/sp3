@@ -57,18 +57,17 @@ table {
   padding-bottom: 12px;
   text-align: left;
   background: none;
-  /* color: white; */
-  /* width: auto; */
 }
 
-td {
-  border: 1px solid rgb(254, 252, 252);
-  padding: 12px;
-  margin: 0 12px;
+.td {
+  border: 0.5px solid rgb(254, 252, 252);
+  padding: 4px;
+  /* margin: 0 12px; */
 }
 
 th.thead {
   color: white;
+  padding: 4px;
 }
 
 .cancelled {
