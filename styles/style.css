@@ -123,3 +123,14 @@ em.subtitle {
 .piano-keys {
   font-size: xlarge;
 }
+
+.navbar {
+  background-color: #00a087;
+  height: 50px;
+  left: 16px;
+  top: 16px;
+
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
