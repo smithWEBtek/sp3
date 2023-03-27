@@ -22,6 +22,13 @@ a.button {
   color: white;
 }
 
+a.button.calendar-button {
+  background-color: #f63710;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 12px;
+}
+
 h1,
 h2,
 h3,
@@ -124,13 +131,43 @@ em.subtitle {
   font-size: xlarge;
 }
 
-.navbar {
-  background-color: #00a087;
-  height: 50px;
-  left: 16px;
-  top: 16px;
+#navbar {
+  overflow: hidden;
+  /* background-color: #333; */
+}
 
+#navbar a {
+  border-radius: 7px;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left: 8px;
+  padding-bottom: 12px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
   position: fixed;
+  top: 0;
   width: 100%;
-  z-index: 9999;
+}
+
+.sticky + .content {
+  padding-top: 60px;
 }
