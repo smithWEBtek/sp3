@@ -12,6 +12,14 @@
   padding: 3%;
 }
 
+.container-background {
+  /* background-image: url("../images/brad-smith-cover.jpg"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  background-color: rgb(203, 235, 245);
+  padding: 3%;
+}
+
 
 .main-content {
   padding-left: 100px;
@@ -31,7 +39,38 @@ a.button.calendar-button {
   background-color: #f63710;
   border-radius: 10px;
   color: white;
-  margin-bottom: 12px;
+}
+
+.header {
+  &:h5 {
+    color: white;
+  }
+}
+
+.cred {
+  border: 2px solid gray;
+  border-radius: 10px;
+}
+
+.ptg-logo {
+  width: 220px;
+}
+
+.schedule-button {
+  border: 1px solid green;
+  border-radius: 10px;
+  background-color: rgb(240, 251, 240);
+  height: 60px;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    background-color: rgb(168, 249, 168);
+  }
+}
+
+.youtube {
+  width: 28%;
 }
 
 h1,
@@ -40,6 +79,16 @@ h3,
 h4,
 .title {
   color: white;
+}
+
+.lessons,
+h1,
+h2,
+h3,
+h4,
+h5,
+li {
+  color: rgb(52, 19, 19);
 }
 
 #gigs {
@@ -128,6 +177,11 @@ em.subtitle {
   margin: auto;
 }
 
+.lesson {
+  border-radius: 10px;
+  width: 120px;
+}
+
 /* .gray-background {
   background-color: rgb(129, 126, 126);
 } */
@@ -177,6 +231,6 @@ em.subtitle {
   width: 100%;
 }
 
-.sticky + .content {
+.sticky+.content {
   padding-top: 60px;
 }
