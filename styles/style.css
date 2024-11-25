@@ -27,6 +27,7 @@
 
 .headshot {
   border-radius: 12px;
+  height: 350px;
 }
 
 a.button {
@@ -56,6 +57,11 @@ a.button.calendar-button {
   width: 220px;
 }
 
+.schedule {
+  margin-bottom: 30px;
+}
+
+
 .schedule-button {
   border: 1px solid green;
   border-radius: 10px;
@@ -73,20 +79,12 @@ a.button.calendar-button {
   width: 28%;
 }
 
-h1,
-h2,
-h3,
-h4,
+.white,
 .title {
   color: white;
 }
 
 .lessons,
-h1,
-h2,
-h3,
-h4,
-h5,
 li {
   color: rgb(52, 19, 19);
 }
