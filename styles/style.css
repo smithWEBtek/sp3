@@ -65,13 +65,13 @@ a.button.calendar-button {
 .schedule-button {
   border: 1px solid green;
   border-radius: 10px;
-  background-color: rgb(240, 251, 240);
+  background-color: rgb(153, 252, 153);
   height: 60px;
   cursor: pointer;
 
   &:hover {
     color: white;
-    background-color: rgb(168, 249, 168);
+    background-color: rgb(25, 186, 25);
   }
 }
 
