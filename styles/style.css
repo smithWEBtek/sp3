@@ -27,7 +27,11 @@
 
 .headshot {
   border-radius: 12px;
-  height: 350px;
+  height: 150px;
+}
+
+.rpt-title {
+  margin-left: 16px;
 }
 
 a.button {
