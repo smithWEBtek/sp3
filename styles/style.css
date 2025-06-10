@@ -114,6 +114,11 @@ li {
   background-color: #ddd;
 }
 
+.info-box {
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+}
+
 table {
   border-radius: 10px 10px 0 0;
   padding-top: 12px;
