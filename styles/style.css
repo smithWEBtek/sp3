@@ -67,11 +67,12 @@ a.button.calendar-button {
 
 
 .schedule-button {
-  padding: 10px;
   border: 1px solid green;
   border-radius: 10px;
   background-color: rgb(192, 242, 192);
   cursor: pointer;
+  padding: 10px;
+  height: max-content;
 
   &:hover {
     color: white;
