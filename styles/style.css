@@ -22,7 +22,7 @@
 
 
 .main-content {
-  padding-left: 100px;
+  padding-left: 140px;
 }
 
 .headshot {
@@ -67,11 +67,14 @@ a.button.calendar-button {
 
 
 .schedule-button {
+  padding: 10px;
   border: 1px solid green;
   border-radius: 10px;
-  background-color: rgb(153, 252, 153);
-  height: 60px;
+  background-color: rgb(192, 242, 192);
+  /* height: 60px; */
   cursor: pointer;
+  width: 25%;
+
 
   &:hover {
     color: white;
@@ -240,4 +243,14 @@ em.subtitle {
 
 .sticky+.content {
   padding-top: 60px;
+}
+
+.tuning-button {
+  font-size: 17px;
+  color: rgb(45, 21, 231);
+  font-weight: bold;
+}
+
+.red li {
+  color: red;
 }
