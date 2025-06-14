@@ -72,7 +72,6 @@ a.button.calendar-button {
   background-color: rgb(192, 242, 192);
   cursor: pointer;
   padding: 10px;
-  height: max-content;
 
   &:hover {
     color: white;
