@@ -72,8 +72,6 @@ a.button.calendar-button {
   border-radius: 10px;
   background-color: rgb(192, 242, 192);
   cursor: pointer;
-  width: 40%;
-
 
   &:hover {
     color: white;
