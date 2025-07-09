@@ -1,4 +1,4 @@
-.index-background {
+*/ .index-background {
   background-image: url("../images/brad-smith-cover.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,6 +10,14 @@
   background-size: cover;
   color: white;
   padding: 3%;
+}
+
+/* Enable dropdowns on hover */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
 }
 
 .container-background {
