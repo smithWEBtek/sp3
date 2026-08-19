@@ -67,7 +67,7 @@ a.button.calendar-button {
 
 
 .schedule-button {
-  border: 1px solid green;
+  border: 2px solid rgb(6, 114, 6);
   border-radius: 10px;
   background-color: rgb(192, 242, 192);
   cursor: pointer;
@@ -246,6 +246,10 @@ em.subtitle {
   font-size: 17px;
   color: rgb(45, 21, 231);
   font-weight: bold;
+    &:hover {
+    color: white;
+    /* background-color: rgb(25, 186, 25); */
+  }
 }
 
 .red li {
