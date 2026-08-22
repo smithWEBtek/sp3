@@ -1,360 +1,199 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="./docs/favicon.ico">
-  <link rel="stylesheet" href="./styles/style.css?v=1.1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  <title>Brad Smith Piano</title>
-</head>
-
-<body class="gray-background">
-  <div class="columns sticky" id="navbar">
-    <div class="column is-1">,
-      <a name='top'></a>
-      <h5>
-        <a class="button is-small" href="/">Home</a></button>
-        <a class="button is-small active" href="/tuning.html">Piano Tuning</a></button>
-        <a class="button is-small" href="/lessons.html">Lessons</a></button>
-        <a class="button is-large" href="#gigs">GIGS!</a></button>
-        <a class="button is-small" href="#bio">Bio</a></button>
-        <a class="button is-small" href="#latinfunkband">LatinFunk</a></button>
-        <a class="button is-small" href="#solopiano">Solo Piano</a></button>
-        <a class="button is-small" href="#cabaret">CabaretTrio</a></button>
-        <a class="button is-small" href="#funktrio">FunkTrio</a></button>
-        <a class="button is-small" href="#vanjam">VanJam</a></button>
-        <a class="button is-small" href="#salsa">SalsaGrupo</a></button>
-        <a class="button is-small" href="#latintrio">LatinTrio</a></button>
-        <a class="button is-small" href="#discography">Discography</a></button>
-        <a class="button is-small" href="./BradSmith-piano-resume.pdf">Resume</a></button>
-      </h5>
-    </div>
-  </div>
-  <div class="container container-background  main-content">
-    <div class="columns">
-      <div class="column">
-
-
-        <span>
-          <h1><a class="title" href='/index.html'>Brad Smith</a></h1>
-        </span>
-        <div class="column is-10">
-          <div class="columns">
-            <div class="column is-6 header">
-              <h5 class="white">II III II III II III II III II III II III II III<br />
-                Funk, Salsa keyboards & left-hand bass<br />
-                Performance, Recording, Touring & Teaching<br />
-                <hr />
-                Book Brad on your gig: <br />
-                phone: 603.494.4147<br>
-                email: brad@smithwebtek.com<br>
-                Facebook: <a href="https://www.facebook.com/profile.php?id=100048574351204" target="_blank">
-                  <i class="fab fa-facebook-f"></i></a>
-                <br />
-                YouTube:
-                <a href="https://www.youtube.com/c/bradsmithpiano" target="_blank"><i class="fab fa-youtube"></i></a>
-              </h5>
-            </div>
-            <div class="column is-6">
-              <div class="columns">
-                <span class="column is-12">
-                  <img class="headshot" src="./images/brad-smith-cover.jpg" alt="Brad" width="auto" height="600">
-                </span>
-              </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>smithpiano technical services</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- MASTER REUSABLE HEADER NAVIGATION -->
+    <header>
+      <nav class="nav-container">
+        <a href="index.html" class="logo-link" aria-label="Go to homepage">
+          <img src="logo.png" alt="Brad Smith Piano Logo" class="header-logo" />
+          <span class="logo-text">smithpiano<span>.com</span></span>
+        </a>
+        <button class="hamburger" aria-label="Toggle Navigation" id="menuBtn">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link active">Piano Tuning</a></li>
+          <li><a href="live-music.html" class="nav-link">Live Music</a></li>
+          <li><a href="studio.html" class="nav-link">Studio</a></li>
+          <li><a href="charts.html" class="nav-link">ProCharts</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <!-- FIRST IMPRESSION HERO BLOCK: MUSICIANSHIP LEADER -->
+      <section class="hero-section">
+        <div style="max-width: 1150px">
+          <h1>Schedule Tuning</h1>
+          <a href="https://www.appointmentquest.com/scheduler/2180095131?schedule=pianoservicefornhandmass" class="btn-tuning" target="_blank" rel="noopener">New Customer</a>
+          <a href="https://www.appointmentquest.com/scheduler/2180095131/login" class="btn-tuning" target="_blank" rel="noopener">Returning Customer</a>
+          <div class="hero-details">
+            <div class="hero-rpt">
+              <hr />
+              <h1>Brad Smith</h1>
+              <h3>Pianist, keyboardist and teacher</h3>
+              <h3>Registered Piano Technician (RPT)</h3>
+              <img 
+              src="/images/brad-smith.jpg" 
+              alt="brad-smith-headshot" 
+              style="width: auto; height: 127px; border-radius: 7px;">
+              <img
+              src="rpt-logo.jpg"
+              alt="Registered Piano Technician Logo"
+              style="width: 250px; height: auto; margin-top: 15px; border-radius: 7px; display: inline;"
+              />
+            <p class="white-text">
+              <br>BA degree from Berklee College of Music 1985 
+              <br>9 yrs service as concert technician at Berklee 1984-1993
+              <br>35+ yrs servicing Boston area homes, schools, studios and venues
+              <br>Complete piano rebuilding and restoration services since 2006
+            </p>
+          </div>
+          <div class="cred-gallery">
+            <img class="cred" src="/images/cred/ptg.jpg" alt="ptg_cert" width="300" height="200">
+            <img class="cred" src="/images/cred/berklee.jpg" alt="berklee_degree" width="300" height="200">
+            <img class="cred" src="/images/cred/yamaha_perf.jpg" alt="yamaha_piano_perf_cert" width="300" height="200">
+            <img class="cred" src="/images/cred/dc_cred.jpg" alt="dampp-chaser" width="300" height="200">
           </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <hr />
-    <div class="columns">
-      <div class="column">
-        <a name='bio'></a>
-        <h3 class="title">Bio</h3>
-        <p>Brad Smith is a veteran keyboardist of funk and Latin music in Boston.
-          He has worked as a show band pianist on cruise ships, accompanying a wide range of vocalists from jazz,
-          classical to R&B and contemporary.
-          His musical loves are funk, and old school Salsa. He has recorded as a sideman on eight albums and has been
-          fortunate to work with many of the great players in Boston and New York.
-          <br />
-          <br />
-          Brad is available for performing, touring and recording anywhere in the world.
-          <br />
-          Below are samples from various groups and styles.
+      <!-- SECONDARY SERVICES SUMMARY PORTAL LAYOUT -->
+      <div class="grid-2x">
+        <!-- LEFT COMPONENT COLUMN: TECHNICAL EXPERTISE HIGHLIGHT -->
+        <div>
+          <h3>Technical Resume</h3>
+      <div class="column is-8">
+        <strong>CONCERT WORK</strong>
+        <br>
+        <p>Concert tuning for the top concert halls and recording studios in the Boston area since 1985.
+          Concert tuning for classical artists including The Boston Pops, Cleveland Symphony and Luciano Pavarotti.
+          Classical concert preparation for Steinway artists Menahem Pressler, Christopher Taylor and Andre' Watts.
+          
+          <br>Extensive concert tuning experience during the 80's and 90's for popular artists such as Billy Joel, Doc Severensen, Natalie Cole, Diana Ross, Elton John, Frank Sinatra, Keith Emerson, Ray Charles, Michael Buble, Bruce Hornsby and Sarah McLachlan. Numerous jazz artists including Wynton Marsalis Group, Chick Corea, Lyle Mays/Pat Metheny Group and Kenny Werner.
+        </p>
+        <br>
+        <strong>IN HOME SERVICE</strong>
+        <br>
+        <p>
+          Since 1992, I have built and maintain a large private tuning clientele in Southern New Hampshire and
+          Northern
+          Mass.
+          Currently serving over 1500 in-home clients throughout New England
+        </p>
+        <br>
+
+        <strong>REBUILDING, REGULATION, TUNING AND VOICING SKILLS</strong>
+        <br>
+        <p>
+          Tuning as many as 1200 pianos per year, my specialty is concert regulation, tuning and tone voicing. Aural
+          tuning is my preference.
+          In 2006 I completed renovations on a 3000 sq ft. piano rebuilding &amp; refinishing shop in Bedford, NH
+          providing
+          complete rebuilding and refinishing services, specializing in Steinway restoration
+          As an active rebuilder with PTG, I keep abreast of the latest tools and methods for the myriad tasks
+          involved
+          in
+          rebuilding a piano. I maintain an extensive array of tools, jigs, machines and fixtures devoted to the
+          highest
+          possible quality rebuilding
+        </p>
+        <br>
+        <strong>TECHNICAL TRAINING</strong>
+        <br>
+        <p>
+          Apprentice to Tom Sheehan, Berklee College of Music, Boston, 1980-82
+          B.A. Degree Piano Performance, Berklee College of Music, Boston, MA , 1985
+          Graduate of Yamaha's Little Red Schoolhouse, grand piano regulation, 1992
+          Factory authorized service training, Yamaha Disklavier pianos, 1993
+          Factory authorized service training, Piano Disc installation &amp; service, 1993
+          Yamaha Disklavier authorized service training, 2003
+          Yamaha Performance Piano regulation training 2003
+          Geneva International, Petrof WorkSmart grand piano regulation and voicing training 2004
+          Ongoing Steinway training at all PTG sponsored events, covering official Steinway methods &amp; procedures
+          for
+          tuning,
+          regulation &amp; voicing of concert instruments.
+        </p>
+        <br>
+        <strong>AFFILIATIONS, PIANO TECHNICIANS GUILD</strong>
+        <br>
+        <p>
+          Piano Technicians Guild continuing education since 1979
+          Active member of PTG, passed all RPT exams in 1990, 2004 and 2014, passing at examiner level, aural tuning only
+          Active member of the Boston Chapter PTG
+        </p>
+        <br>
+        <strong>MUSICAL BACKGROUND</strong>
+        <br>
+        <p>
+          Working pianist since 1975
+          <br>Instructor, Jazz Piano, Northwestern Michigan College 1982-84
+          <br>Music therapy, blind &amp; autistic children, Mass Assoc. for the Blind 1984-86
+          <br>Private instructor, jazz &amp; classical piano since 1975
+          <br>Private study with Charlie Banacos, jazz piano and improvisation
+          <br>Private study with Cathy Rand, Boston Conservatory, classical technique
+          <br>Extensive experience as solo pianist in wide variety of settings
         </p>
       </div>
     </div>
-    <div class="columns">
-      <span class="column is-3 youtube">
-        <iframe height="200" src="https://www.youtube.com/embed/9Le5NMxMlVo" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-      </span>
-      <span class="column is-3">
-        <iframe height="200" src="https://www.youtube.com/embed/4Zmp6wnajMM" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </span>
-      <span class="column is-3">
-        <iframe height="200" src="https://www.youtube.com/embed/w8kmVYpY-Dc" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </span>
-    </div>
-    <hr />
-    <h3 class="title section-link">GIGS!</h3>
-    <a name='gigs'></a>
-    <br />
-    <br />
-    <iframe
-      src="https://calendar.google.com/calendar/embed?src=c_e0c52e8a02a5265d9dd2536fd336e0ae6a04081c9a1682186db5c3a24028f07d%40group.calendar.google.com&ctz=America%2FNew_York"
-      style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    <hr>
-    <div class="columns">
-      <div class="column">
-        <a name='latinfunkband'></a>
-        <h3 class="title">Brad Smith Band - LatinFunkBoogaloo</h3>
-        <p>Keyboard w/left-hand bass, guitar, drums, congas, horns</p>
-        <iframe width="300" height="180" src="https://www.youtube.com/embed/Uk_OGalvGVc?si=V0kgodWpCocin6XI"
-          frameborder="0" allowfullscreen="yes"></iframe>
+
+        <div>
+          <div class="card">
+              <legend><strong><h3>GUIDE TO PRICING</h3></strong></legend>
+              <p class="text-muted">We accept cash, check, Venmo or Zelle</p>
+            <h3><b>Minimum appointment fee: $200</b></h3>
+            <p>Most appointments are in the range of $200 to $350</p>
+            <p>Pianos that are serviced regularly (like every 6-9 months) tend towards the lower range.</p>
+            <br>
+            <b>Common service steps are:</b>
+            <ul>
+              <li>Tuning to A440 standard pitch</li>
+              <li>Check action screws (there are about 200 screws that need periodic adjustment)</li>
+              <li>Check and adjust pedals, tighten piano bench hardware</li>
+              <li>Action mechansim adjustment as time permits (the more often I see a piano, the more I can do small
+                improvements to the touch and tone)</li>
+              <li>Minor tone voicing (over time, hammers get compressed creating harsh tone that can be smoothed out
+                with
+                regular service)</li>
+            </ul>
+            <br />
+            <b>When the piano's overal pitch is flat by 10% or more, costs tend towards the higher price range.</b>
+            <p>Common service steps are:</p>
+            <ul>
+              <li>All the steps above</li>
+              <li>Additional rough tunings to put the piano at the pitch standard (this makes it possible to do the
+                actual
+                fine tuning)</li>
+              <p>This is due to seasonal humidity changes that tend to make the piano go flat over time, requiring
+                additional tuning(s) to correct pitch.</p>
+              <br />
+              <b>I recommend sensible service work ... </b>
+              <p>In all cases my approach is to consider the condition, history and context of you and your piano before
+                recommending any work.</p>
+          </div>
+            <img class="cred" src="/images/24.jpg" alt="ptg_cert" width="300" height="200">
+        </div>
       </div>
-    </div>
-    <div class="column">
-      <a name='funktrio'></a>
-      <h3 class="title">FunkTrio</h3>
-      <p>Keyboard w/left-hand bass, electric guitar, drums</p>
-      <iframe width="300" height="180" src="https://www.youtube.com/embed/KhY47CvgsQ4" frameborder="0"
-        allowfullscreen="yes"></iframe>
-      <iframe width="300" height="180" src="https://www.youtube.com/embed/sn3P9Ei58D0" frameborder="0"
-        allowfullscreen="yes"></iframe>
-      <iframe width="300" height="180" src="https://www.youtube.com/embed/WSEFKzdlrGM" frameborder="0"
-        allowfullscreen="yes"></iframe>
-      <iframe width="300" height="180" src="https://www.youtube.com/embed/Q1KJ5Mxnaps" frameborder="0"
-        allowfullscreen="yes"></iframe>
-      <iframe width="300" height="180" src="https://www.youtube.com/embed/keS0riw3nHw" frameborder="0"
-        allowfullscreen="yes"></iframe>
-    </div>
-  </div>
-  <br>
-  <hr>
+    </main>
 
-  <div class="columns">
-    <div class="column">
-      <a name='latintrio'></a>
-      <h3 class="title">LatinTrio</h3>
-      <p>Keyboard w/left-hand bass, guitar, percussion.</p>
-      <iframe width="300" height="552" scrolling="no" frameborder="no"
-        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/207133298&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-    </div>
-  </div>
-  <br>
-  <hr>
+    <!-- SYSTEM CORE INTEGRATION EXECUTORS -->
+    <script src="marketplace-widget.js"></script>
+    <script>
+      // Clean mobile menu hamburger toggle drawer open/close mechanics
+      const menuBtn = document.getElementById("menuBtn");
+      const navMenu = document.getElementById("navMenu");
 
-  <div class="columns">
-    <div class="column">
-      <a name='solopiano'></a>
-      <h3 class="title">Solo Piano</h3>
-      <p>Solo piano</p>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/207129494&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/8Sl2DtChnw4" title="YouTube video player"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </div>
-  <br>
-  <hr>
-
-  <div class="columns">
-    <div class="column">
-      <a name='cabaret'></a>
-      <h3 class="title">CabaretTrio</h3>
-      <p>CabaretTrio</p>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/7hh1cVlfE-A" title="YouTube video player"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </div>
-  <br>
-  <hr>
-
-  <div class="columns">
-    <div class="column">
-      <a name='vanjam'></a>
-      <h3 class='title'>Van Jam Trio</h3>
-      <p>keyboards, bass, drums trio playing in the van, various locations in Boston and Cambridge</p>
-    </div>
-  </div>
-  <div class="columns">
-    <div class="column is-4">
-      <iframe width="300" height="200" src="https://www.youtube.com/embed/LzFNFoEXU0g" frameborder="0"
-        allowfullscreen></iframe>
-    </div>
-    <div class="column is-4">
-      <iframe width="300" height="200" src="https://www.youtube.com/embed/tifEHy6QM_8" frameborder="0"
-        allowfullscreen></iframe>
-    </div>
-    <div class="column is-4">
-      <iframe width="300" height="200" src="https://www.youtube.com/embed/LQKqf6At6ko" frameborder="0"
-        allowfullscreen></iframe>
-    </div>
-  </div>
-  <br>
-  <hr>
-
-  <div class="columns">
-    <div class="column">
-      <a name='salsa'></a>
-      <h3 class='title'>Salsa Grupo</h3>
-    </div>
-  </div>
-
-  <div class="columns">
-    <div class="column is-4">
-      <iframe width="300" height="250" src="https://www.youtube.com/embed/j7PBcEiBrck" frameborder="1"
-        allowfullscreen></iframe>
-    </div>
-    <div class="column is-4">
-      <iframe width="300" height="250" src="https://www.youtube.com/embed/unSYVFLMaK8" frameborder="1"
-        allowfullscreen></iframe>
-    </div>
-    <div class="column is-4">
-      <iframe width="300" height="250" src="https://www.youtube.com/embed/VzhjMeHs_5o" frameborder="1"
-        allowfullscreen></iframe>
-    </div>
-  </div>
-  <br>
-  <hr>
-  <div class="columns">
-    <div class="column">
-      <a name='discography'></a>
-      <h3 class='title'>DISCOGRAPHY</h3>
-    </div>
-  </div>
-
-  <div class="columns">
-    <div class="column is-5">
-      <iframe width="300" height="200" src="https://www.youtube.com/embed/OSkmEbcF0A0?rel=0" frameborder="0"
-        allowfullscreen></iframe>
-    </div>
-    <div class="column is-6">
-      <p>Michael Blum Quartet, recording "Don't Ever Go"</p>
-      <p>Wes'n: A Tribute to Wes Montgomery</p>
-      <p>Michael Blum (guitar), Chip McNeill (sax), Jim Stinnett (bass), Brad Smith (piano), Dave DiCenso
-        (drums)</p>
-      <p>Recorded at Jon Chase Studio 2017</p>
-    </div>
-  </div>
-  <div class="columns">
-    <div class="column is-2">
-      <img src="./images/rec/blum-oscar.jpg" style="float: left" width="150px" height="150px">
-    </div>
-    <div class="column is-10">
-      <a href="https://www.amazon.com/Chasin-Oscar-Tribute-Peterson/dp/B01C51VXYI" target="false"><strong>Chasin'
-          Oscar</strong></a>
-      <p>Michael Blum Quartet</p>
-      <p>Recorded at Jon Chase Studio Jul 2016</p>
-      <p>Michael Blum (guitar), Jim Stinnett (bass), Dom Moio (drums), Brad Smith (piano</p>
-    </div>
-  </div>
-
-  <div class="columns">
-    <div class="column is-2">
-      <img src="./images/rec/blum-commit.jpg" style="float: left" width="150px" height="150px">
-    </div>
-    <div class="column is-10">
-      <a href="https://www.amazon.com/Commitment-Michael-Blum/dp/B01BSH7QZK"
-        target="false"><strong>Commitment</strong></a>
-      <p>Michael Blum, DOWNBEAT MAGAZINE 2015 “RISING STAR”</p>
-      <p>Recorded at Jon Chase Studio Jan 2015</p>
-      <p>Michael Blum (guitar), Jim Stinnett (bass), Dom Moio (drums), Brad Smith (piano</p>
-    </div>
-  </div>
-
-  <div class="columns">
-    <div class="column is-2">
-      <img src="./images/rec/blum-init.jpg" style="float: left" width="150px" height="150px">
-    </div>
-    <div class="column is-10">
-      <a href="https://www.amazon.com/Initiation-Michael-Blum-Quartet/dp/B00ILW4J7Y/ref=sr_1_1?dchild=1&qid=1625925657&refinements=p_32%3AMichael+Blum+Quartet&s=music&sr=1-1"
-        alt="initiaion amazon link" target="false">
-        <strong>Initiation</strong></a>
-      <p>Michael Blum Quartet</p>
-      <p>Recorded at Jon Chase Studio 2014</p>
-      <p>See review of this album in the November 2014 issue of DownBeat</p>
-      <p>Michael Blum (guitar), Jim Stinnett (bass), Dom Moio (drums), Brad Smith (piano)</p>
-    </div>
-  </div>
-
-  <div class="columns">
-    <div class="column is-2">
-      <img src="./images/rec/chris.jpg" style="float: left" width="150px" height="150px">
-    </div>
-    <div class="column is-10">
-      <strong>Chris Plays Ray</strong>
-      <p>Chris Mewhinney Quartet/Quintet/Trio</p>
-      <p>Recorded at Jon Chase Studio 2013</p>
-      <p>Chris Mewhinney (bass), Jim Stinnett (bass), Michael Blum (Guitar), Dom Moio (drums), Brad Smith
-        (piano)
-      </p>
-    </div>
-  </div>
-
-  <div class="columns">
-    <div class="column is-2">
-      <img src="./images/rec/bees.jpg" style="float: left" width="150px" height="150px">
-    </div>
-    <div class="column is-10">
-      <strong>Live Evil</strong>
-      <p>Bees Deluxe</p>
-      <p>Recorded live at “The Grog” Newburyport, MA 2013</p>
-      <p>Conrad Warre, (guitar, vocal), Brad Smith (keys/bass), Patrick Sanders (drums)</p>
-    </div>
-  </div>
-
-  <div class="columns">
-    <div class="column is-2">
-      <img src="./images/rec/simone.jpg" style="float: left" width="150px" height="150px">
-    </div>
-    <div class="column is-10">
-      <a href="https://www.amazon.com/Take-My-Love-Simone-Waddell/dp/B08L467YW4" alt="take-my-love amazon link"
-        target="false">
-        <strong>Take My Love</strong></a>
-      <p>Simone Waddel</p>
-      <p>Recorded at Blue Jay Studios, Carlisle, MA 1996</p>
-      <p>Simone Waddel (vocals, composer), Jim Stinnett (bass, arranger), Tony Fesmire and Dennis
-        Montgomery(vocals),
-        Marco Abreu (guitar), Charles Haynes (drums), Germmain Nelson (piano), Brad Smith (piano & keyboards)
-      </p>
-    </div>
-  </div>
-
-  <div class="columns">
-    <div class="column is-2">
-      <img src="./images/rec/alphonso.jpg" style="float: left" width="150px" height="150px">
-    </div>
-    <div class="column is-10">
-      <a href="https://www.amazon.com/At-Edge-Alfonso-Vilallonga/dp/B01KB0JIE2" alt="at-the-edge amazon link"
-        target="false">
-        <strong>At The Edge</strong></a>
-      <p>Alfonso Villalonga & The Cabaret Rose</p>
-      <p>Recorded at Blue Jay Studios, Carlisle, MA 1990</p>
-      <p>Alfonso Villalonga (vocalist, composer, arranger, conductor), Alan Bern (accordion), Bob Nieske (bass),
-        Matt
-        Wilson (drums), Johaness Ammon (violin), Jeff Warschauer (mandolin), Bryndis Baldursson (cello), Cece
-        Giannotti (guitar), Dr No (drums), Roy Okutani (trumpet), Billy Novick (clarinet), Curtis Hasselbrink
-        (trombone), Bevan Manson and Brad Smith (piano)</p>
-    </div>
-  </div>
-  </div>
-</body>
-
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("open");
+        navMenu.classList.toggle("mobile-open");
+      });
+    </script>
+  </body>
 </html>
