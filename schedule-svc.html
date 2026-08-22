@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smithpiano schedule service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="Brad Smith Piano Logo" class="header-logo">
+                <span class="logo-text">smithpiano<span>.com</span></span>
+            </a>
+            <button class="hamburger" aria-label="Toggle Navigation" id="menuBtn">
+                <span></span><span></span><span></span>
+            </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link active">Piano Tuning</a></li>
+          <li><a href="live-music.html" class="nav-link">Live Music</a></li>
+          <li><a href="studio.html" class="nav-link">Studio</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto;">
+            <span class="text-highlight">Instant Verification Funnel</span>
+            <h2 style="font-size: 2.2rem; margin-top: 0.2rem;">Book Your Tuning Appointment</h2>
+            <p class="text-muted mt-1">Select your allocation block securely through the AppointmentQuest processing layer.</p>
+        </div>
+
+        <div class="card" style="max-width: 900px; margin: 0 auto; background-color: #ffffff; min-height: 350px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-color: rgba(55, 60, 96, 0.15);">
+				<iframe src="
+				https://www.appointmentquest.com/scheduler/2180095131?schedule=pianoservicefornhandmass" title="smithpiano online scheduler"></iframe>
+
+					<a HREF="https://www.appointmentquest.com/scheduler/2180095131/enroll" TARGET="218009513101">New customers - Click here to sign up and make an appointment</a>
+
+					<p class="text-muted mb-2" style="font-weight: 600;">AppointmentQuest Secure Verification Interface</p>
+            <button class="btn-primary" onclick="window.open('https://appointmentquest.com', '_blank')" style="font-size: 1.1rem; padding: 1rem 2.5rem;">
+                Launch Booking Portal ↗
+            </button>
+        </div>
+<!-- 
+        <div style="max-width: 900px; margin: 2rem auto 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div style="background: rgba(79, 143, 63, 0.05); padding: 1.25rem; border-radius: 6px; border: 1px solid rgba(79, 143, 63, 0.15);">
+                <strong style="color: var(--moss-green); display: block; margin-bottom: 0.25rem;">📬 Check Spam Folders Instantly</strong>
+                <p class="text-muted" style="font-size: 0.85rem; line-height: 1.4;">An invoice tracking receipt is auto-generated immediately. Check filters if confirmation is delayed.</p>
+            </div>
+            <div style="background: rgba(55, 60, 96, 0.05); padding: 1.25rem; border-radius: 6px; border: 1px solid rgba(55, 60, 96, 0.15);">
+                <strong style="color: var(--twilight-indigo); display: block; margin-bottom: 0.25rem;">📱 Missing Receipt Support</strong>
+                <p class="text-muted" style="font-size: 0.85rem; line-height: 1.4;">If confirmation fails to deliver, avoid duplicate processing blocks and text support lines instantly at <strong>603-494-4147</strong>.</p>
+            </div>
+        </div> -->
+    </main>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', () => {
+            document.getElementById('menuBtn').classList.toggle('open');
+            document.getElementById('navMenu').classList.toggle('mobile-open');
+        });
+    </script>
+</body>
+</html>

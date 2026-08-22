@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smithpiano live music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- REUSABLE HEADER NAVIGATION -->
+    <header>
+        <nav class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="Brad Smith Piano Logo" class="header-logo">
+                <span class="logo-text">smithpiano<span>.com</span></span>
+            </a>
+            <button class="hamburger" aria-label="Toggle Navigation" id="menuBtn">
+                <span></span><span></span><span></span>
+            </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Piano Tuning</a></li>
+          <li><a href="live-music.html" class="nav-link active">Live Music</a></li>
+          <li><a href="studio.html" class="nav-link">Studio</a></li>
+          <li><a href="charts.html" class="nav-link">ProCharts</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- MASTER PAGE TITLE -->
+        <div style="margin-bottom: 2.5rem; border-bottom: 1px solid rgba(44, 39, 54, 0.1); padding-bottom: 1.5rem;">
+            <span class="text-highlight">New England Jazz & Latin music public events</span>
+            <h2 style="font-size: 2.2rem; margin-top: 0.2rem;">Live Performances & Gigs</h2>
+            <p class="text-muted">We thrive on making musical memories and can't do it without you!</p>
+        </div>
+
+
+        <div style="max-width: 850px">
+          <h1>Brad Smith</h1>
+          <h3>Pianist, keyboardist and teacher</h3>
+          <p>
+            A veteran keyboardist of jazz, funk and Latin music in
+            Boston from solo piano to show bands on cruise ships,
+            accompanying a wide range of vocalists from jazz, classical to R&B
+            and contemporary. His musical loves are funk, and old school Salsa.
+            <br> 
+            <br>Brad has recorded as a sideman on several albums with many of the great players in Boston and New York and is available for performing, touring and recording anywhere in the
+            world.
+
+            <br>Brad plays in a variety of musical groups in the Boston area both as leader and sideman.
+            <br>
+            <br>
+        </div>
+
+
+        <!-- PERFORMANCE PACKAGES / BOOKING TIERS -->
+        <h3 style="color: var(--twilight-indigo); margin-bottom: 1rem; font-size: 1.4rem;">🎹 Live Music combinations for hire</h3>
+        <div class="grid-3x mb-1">
+            <div class="card">
+                <h3>Yacht Cha Cha</h3>
+                <p class="text-muted mt-1" style="font-size: 0.9rem;">Latinized jazz, pop and "yacht rock" tunes: keys, guitar & percussion (vocals optional).</p>
+            </div>
+            <div class="card">
+                <h3>Brads Latin Funk</h3>
+                <p class="text-muted mt-1" style="font-size: 0.9rem;">Latinized jazz, pop and funk tunes: keys, guitar & percussion (instrumental only).</p>
+            </div>
+            <div class="card">
+                <h3>Solo Piano</h3>
+                <p class="text-muted mt-1" style="font-size: 0.9rem;">Melodic, grooving solo piano playing jazz, pop & latin tunes, for any event.</p>
+            </div>
+        </div>
+ 
+        <button type="button" id="openQuoteBtn" class="btn-primary mt-1">Request Quote for Live Music</button>
+
+        <!-- DYNAMIC DATA-DRIVEN TOUR LAYOUT GRID STRUCTURE -->
+        <div style="margin-top: 3rem; margin-bottom: 1.5rem;">
+            <h3 style="color: var(--twilight-indigo); font-size: 1.4rem;">📅 Upcoming Performance Schedule</h3>
+        </div>
+
+        <!-- DUAL ARCHITECTURE: GOOGLE CALENDAR EMBED MATRIX & EMAIL CONVERSION -->
+        <div class="grid-1x" style="margin-top: 2rem;">
+            <!-- RIGHT MODULE: GOOGLE CALENDAR COMPONENT CONTAINER -->
+            <div class="card" style="background-color: #ffffff; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3>Brad Smith GIGS Calendar</h3>
+                </div>
+                
+                <!-- Google Calendar Embed Frame -->
+                <div style="width: 100%; overflow-x: auto; border: 1px solid rgba(55, 60, 96, 0.15); border-radius: 4px;">
+                    <iframe src="https://calendar.google.com/calendar/embed?src=c_e0c52e8a02a5265d9dd2536fd336e0ae6a04081c9a1682186db5c3a24028f07d%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="100%" height="450" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==========================================================================
+             MUSICIAN BIO & FEATURED SAMPLES
+             ========================================================================== -->
+        <div class="section-divider">
+            <span class="text-highlight">Veteran Boston Keyboardist</span>
+            <h2 style="font-size: 2rem; margin-top: 0.2rem; color: var(--twilight-indigo);">Musician Bio & Live Performance Samples</h2>
+            <p class="text-muted mt-1" style="max-width: 950px; font-size: 1rem; line-height: 1.6;">
+                Brad Smith is a veteran keyboardist of funk and Latin music in Boston. He has worked as a show band pianist on cruise ships, accompanying a wide range of vocalists from jazz and classical to R&B and contemporary. His musical loves are funk and old-school Salsa. He has recorded as a sideman on eight albums and has been fortunate to work with many of the great players in Boston and New York. Brad is available for performing, touring, and recording anywhere in the world.
+            </p>
+        </div>
+
+        <!-- Featured Highlights Grid -->
+        <div class="grid-3x mb-2">
+            <div class="video-responsive">
+                <iframe src="https://www.youtube.com/embed/9Le5NMxMlVo" title="Brad Smith Live Performance" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-responsive">
+                <iframe src="https://www.youtube.com/embed/4Zmp6wnajMM" title="Brad Smith Live Performance 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-responsive">
+                <iframe src="https://www.youtube.com/embed/w8kmVYpY-Dc" title="Brad Smith Live Performance 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- ==========================================================================
+             ENSEMBLES & REPERTOIRE SHOWCASE
+             ========================================================================== -->
+        <div class="section-divider">
+            <span class="text-highlight">Groups & Lineups</span>
+            <h2 style="font-size: 2rem; margin-top: 0.2rem; color: var(--twilight-indigo);">Ensembles & Audio / Video Portfolio</h2>
+            <p class="text-muted mt-1">Explore video captures and audio recordings across various group configurations.</p>
+        </div>
+
+        <!-- 1. Brad Smith Band - LatinFunkBoogaloo -->
+        <div class="card border-accent mb-2" style="padding: 1.75rem;">
+            <div style="margin-bottom: 1.25rem;">
+                <h3 style="color: var(--twilight-indigo); font-size: 1.3rem;">Brad Smith Band — LatinFunkBoogaloo</h3>
+                <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem;">Keyboard with left-hand bass, guitar, drums, congas, and horns.</p>
+            </div>
+            <div style="max-width: 600px;">
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/Uk_OGalvGVc?si=V0kgodWpCocin6XI" title="LatinFunkBoogaloo Live" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. FunkTrio -->
+        <div class="card border-accent mb-2" style="padding: 1.75rem;">
+            <div style="margin-bottom: 1.25rem;">
+                <h3 style="color: var(--twilight-indigo); font-size: 1.3rem;">FunkTrio</h3>
+                <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem;">Keyboard with left-hand bass, electric guitar, and drums.</p>
+            </div>
+            <div class="grid-3x">
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/KhY47CvgsQ4" title="FunkTrio Track 1" allowfullscreen></iframe>
+                </div>
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/sn3P9Ei58D0" title="FunkTrio Track 2" allowfullscreen></iframe>
+                </div>
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/WSEFKzdlrGM" title="FunkTrio Track 3" allowfullscreen></iframe>
+                </div>
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/Q1KJ5Mxnaps" title="FunkTrio Track 4" allowfullscreen></iframe>
+                </div>
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/keS0riw3nHw" title="FunkTrio Track 5" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. LatinTrio & Solo Piano (Side-by-Side Audio Players) -->
+        <div class="grid-2x mb-2">
+            <!-- LatinTrio Card -->
+            <div class="card border-accent" style="padding: 1.75rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 style="color: var(--twilight-indigo); font-size: 1.3rem;">LatinTrio</h3>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem; margin-bottom: 1.25rem;">Keyboard with left-hand bass, guitar, and percussion.</p>
+                </div>
+                <div class="soundcloud-embed-wrapper">
+                    <iframe height="380" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/207133298&amp;color=%234f8f3f&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false" allow="autoplay"></iframe>
+                </div>
+            </div>
+
+            <!-- Solo Piano Card -->
+            <div class="card border-accent" style="padding: 1.75rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 style="color: var(--twilight-indigo); font-size: 1.3rem;">Solo Piano</h3>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem; margin-bottom: 1.25rem;">Melodic jazz, pop, and Latin standards for private functions and cocktail hours.</p>
+                </div>
+                <div class="soundcloud-embed-wrapper mb-1">
+                    <iframe height="190" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/207129494&amp;color=%234f8f3f&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true" allow="autoplay"></iframe>
+                </div>
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/8Sl2DtChnw4" title="Solo Piano Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. CabaretTrio -->
+        <div class="card border-accent mb-2" style="padding: 1.75rem;">
+            <div style="margin-bottom: 1.25rem;">
+                <h3 style="color: var(--twilight-indigo); font-size: 1.3rem;">CabaretTrio</h3>
+                <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem;">Live cabaret performances and theatrical accompaniment.</p>
+            </div>
+            <div style="max-width: 600px;">
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/7hh1cVlfE-A" title="CabaretTrio Live" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Van Jam Trio -->
+        <div class="card border-accent mb-2" style="padding: 1.75rem;">
+            <div style="margin-bottom: 1.25rem;">
+                <h3 style="color: var(--twilight-indigo); font-size: 1.3rem;">Van Jam Trio</h3>
+                <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem;">Keyboards, bass, and drums playing live in the van across various locations in Boston and Cambridge.</p>
+            </div>
+            <div class="grid-3x">
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/LzFNFoEXU0g" title="Van Jam Session 1" allowfullscreen></iframe>
+                </div>
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/tifEHy6QM_8" title="Van Jam Session 2" allowfullscreen></iframe>
+                </div>
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/LQKqf6At6ko" title="Van Jam Session 3" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. Salsa Grupo -->
+        <div class="card border-accent mb-2" style="padding: 1.75rem;">
+            <div style="margin-bottom: 1.25rem;">
+                <h3 style="color: var(--twilight-indigo); font-size: 1.3rem;">Salsa Grupo</h3>
+                <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem;">High-energy authentic salsa and Latin grooves.</p>
+            </div>
+            <div class="grid-3x">
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/j7PBcEiBrck" title="Salsa Grupo Performance 1" allowfullscreen></iframe>
+                </div>
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/unSYVFLMaK8" title="Salsa Grupo Performance 2" allowfullscreen></iframe>
+                </div>
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/VzhjMeHs_5o" title="Salsa Grupo Performance 3" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==========================================================================
+             RECORDED DISCOGRAPHY
+             ========================================================================== -->
+        <div class="section-divider">
+            <span class="text-highlight">Studio & Sideman Work</span>
+            <h2 style="font-size: 2rem; margin-top: 0.2rem; color: var(--twilight-indigo);">Recorded Discography & Album Credits</h2>
+            <p class="text-muted mt-1">Sideman appearances and featured piano/keyboard tracks recorded across New England studios.</p>
+        </div>
+
+        <!-- Featured Video: Michael Blum Quartet -->
+        <div class="card mb-2" style="background: #ffffff; padding: 1.75rem;">
+            <div class="grid-2x" style="align-items: center;">
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/OSkmEbcF0A0?rel=0" title="Michael Blum Quartet - Don't Ever Go" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <span class="text-highlight" style="font-size: 0.85rem; text-transform: uppercase;">Featured Studio Session</span>
+                    <h3 style="color: var(--twilight-indigo); margin-top: 0.25rem; font-size: 1.3rem;">Michael Blum Quartet — "Don't Ever Go"</h3>
+                    <p style="font-weight: 600; color: var(--moss-green); margin-top: 0.2rem;">Wes'n: A Tribute to Wes Montgomery</p>
+                    <p class="text-muted mt-1" style="font-size: 0.9rem;">
+                        Michael Blum (guitar), Chip McNeill (sax), Jim Stinnett (bass), <strong>Brad Smith (piano)</strong>, Dave DiCenso (drums).
+                        <br><span style="font-size: 0.82rem; color: #888;">Recorded at Jon Chase Studio (2017).</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Discography Albums Grid -->
+        <div class="discography-grid mb-2">
+            <!-- Chasin' Oscar -->
+            <div class="album-card">
+                <img src="./images/rec/blum-oscar.jpg" alt="Chasin' Oscar Album Cover" class="album-cover">
+                <div class="album-info">
+                    <div class="album-title">
+                        <a href="https://www.amazon.com/Chasin-Oscar-Tribute-Peterson/dp/B01C51VXYI" target="_blank" rel="noopener noreferrer">Chasin' Oscar ↗</a>
+                    </div>
+                    <div class="album-artist">Michael Blum Quartet</div>
+                    <p class="album-notes">
+                        Michael Blum (g), Jim Stinnett (b), Dom Moio (d), Brad Smith (p).
+                        <br><span style="font-size: 0.78rem;">Jon Chase Studio (Jul 2016)</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Commitment -->
+            <div class="album-card">
+                <img src="./images/rec/blum-commit.jpg" alt="Commitment Album Cover" class="album-cover">
+                <div class="album-info">
+                    <div class="album-title">
+                        <a href="https://www.amazon.com/Commitment-Michael-Blum/dp/B01BSH7QZK" target="_blank" rel="noopener noreferrer">Commitment ↗</a>
+                    </div>
+                    <div class="album-artist">Michael Blum (DownBeat "Rising Star")</div>
+                    <p class="album-notes">
+                        Michael Blum (g), Jim Stinnett (b), Dom Moio (d), Brad Smith (p).
+                        <br><span style="font-size: 0.78rem;">Jon Chase Studio (Jan 2015)</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Initiation -->
+            <div class="album-card">
+                <img src="./images/rec/blum-init.jpg" alt="Initiation Album Cover" class="album-cover">
+                <div class="album-info">
+                    <div class="album-title">
+                        <a href="https://www.amazon.com/Initiation-Michael-Blum-Quartet/dp/B00ILW4J7Y/ref=sr_1_1?dchild=1&qid=1625925657&refinements=p_32%3AMichael+Blum+Quartet&s=music&sr=1-1" target="_blank" rel="noopener noreferrer">Initiation ↗</a>
+                    </div>
+                    <div class="album-artist">Michael Blum Quartet</div>
+                    <p class="album-notes">
+                        Michael Blum (g), Jim Stinnett (b), Dom Moio (d), Brad Smith (p).
+                        <br><span style="font-size: 0.78rem;">Reviewed in DownBeat Nov 2014</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Chris Plays Ray -->
+            <div class="album-card">
+                <img src="./images/rec/chris.jpg" alt="Chris Plays Ray Album Cover" class="album-cover">
+                <div class="album-info">
+                    <div class="album-title">Chris Plays Ray</div>
+                    <div class="album-artist">Chris Mewhinney Quartet / Quintet</div>
+                    <p class="album-notes">
+                        Chris Mewhinney (b), Jim Stinnett (b), Michael Blum (g), Dom Moio (d), Brad Smith (p).
+                        <br><span style="font-size: 0.78rem;">Jon Chase Studio (2013)</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Live Evil -->
+            <div class="album-card">
+                <img src="./images/rec/bees.jpg" alt="Live Evil Album Cover" class="album-cover">
+                <div class="album-info">
+                    <div class="album-title">Live Evil</div>
+                    <div class="album-artist">Bees Deluxe</div>
+                    <p class="album-notes">
+                        Conrad Warre (g, vox), Brad Smith (keys/bass), Patrick Sanders (d).
+                        <br><span style="font-size: 0.78rem;">Recorded live at "The Grog", Newburyport (2013)</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Take My Love -->
+            <div class="album-card">
+                <img src="./images/rec/simone.jpg" alt="Take My Love Album Cover" class="album-cover">
+                <div class="album-info">
+                    <div class="album-title">
+                        <a href="https://www.amazon.com/Take-My-Love-Simone-Waddell/dp/B08L467YW4" target="_blank" rel="noopener noreferrer">Take My Love ↗</a>
+                    </div>
+                    <div class="album-artist">Simone Waddell</div>
+                    <p class="album-notes">
+                        Simone Waddell (vox), Jim Stinnett (b), Brad Smith (piano & keyboards), all-star ensemble.
+                        <br><span style="font-size: 0.78rem;">Blue Jay Studios, Carlisle MA (1996)</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- At The Edge -->
+            <div class="album-card">
+                <img src="./images/rec/alphonso.jpg" alt="At The Edge Album Cover" class="album-cover">
+                <div class="album-info">
+                    <div class="album-title">
+                        <a href="https://www.amazon.com/At-Edge-Alfonso-Vilallonga/dp/B01KB0JIE2" target="_blank" rel="noopener noreferrer">At The Edge ↗</a>
+                    </div>
+                    <div class="album-artist">Alfonso Villalonga & The Cabaret Rose</div>
+                    <p class="album-notes">
+                        Alfonso Villalonga (vox, arr), Alan Bern, Bob Nieske, Matt Wilson, Brad Smith (p).
+                        <br><span style="font-size: 0.78rem;">Blue Jay Studios (1990)</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- LIVE MUSIC INQUIRY MODAL -->
+    <div class="modal-backdrop" id="quoteModal" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div>
+                    <h3 class="modal-title" id="quoteModalTitle">Request a Quote for Live Music</h3>
+                    <p class="modal-subtitle">Tell Brad about your upcoming event and musical preferences.</p>
+                </div>
+                <button type="button" class="modal-close-btn" id="closeQuoteModal" aria-label="Close quote request modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="formAlertSuccess" class="form-alert alert-success">
+                    <strong>Thank you!</strong> Your quote request has been sent to Brad (brad@smithpiano.com). We will get back to you shortly!
+                </div>
+                <div id="formAlertError" class="form-alert alert-error">
+                    <strong>Oops!</strong> There was an issue submitting your request. Please try again or email Brad directly at <a href="mailto:brad@smithpiano.com" style="text-decoration: underline; font-weight: bold;">brad@smithpiano.com</a>.
+                </div>
+
+                <form id="liveMusicQuoteForm">
+                    <!-- Anti-spam honeypot -->
+                    <input type="text" name="_honey" style="display:none">
+                    <!-- Email Subject Customization for FormSubmit -->
+                    <input type="hidden" name="_subject" value="New Live Music Inquiry from smithpiano.com">
+                    <input type="hidden" name="_template" value="table">
+
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="clientName" class="form-label">Full Name <span class="required">*</span></label>
+                            <input type="text" id="clientName" name="name" class="form-control" placeholder="Jane Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientPhone" class="form-label">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="clientPhone" name="phone" class="form-control" placeholder="(603) 555-0123" required>
+                        </div>
+                    </div>
+
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="clientEmail" class="form-label">Email Address <span class="required">*</span></label>
+                            <input type="email" id="clientEmail" name="email" class="form-control" placeholder="jane@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventDate" class="form-label">Event Date <span class="required">*</span></label>
+                            <input type="date" id="eventDate" name="event_date" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="musicPackage" class="form-label">Preferred Music Combination</label>
+                        <select id="musicPackage" name="combination" class="form-control">
+                            <option value="Not Sure / Open to Recommendation">-- Select a Live Music Option --</option>
+                            <option value="Yacht Cha Cha (Latinized Jazz, Pop & Yacht Rock)">Yacht Cha Cha (Latinized Jazz, Pop & Yacht Rock)</option>
+                            <option value="Brads Latin Funk (Keys, Guitar & Percussion - Instrumental)">Brad's Latin Funk (Keys, Guitar & Percussion - Instrumental)</option>
+                            <option value="Solo Piano (Melodic Jazz, Pop & Latin)">Solo Piano (Melodic Jazz, Pop & Latin)</option>
+                            <option value="Custom / Other Ensemble">Custom / Other Ensemble</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="eventDetails" class="form-label">Event Details & Venue <span class="required">*</span></label>
+                        <textarea id="eventDetails" name="details" class="form-control" placeholder="Location/venue, expected hours, type of occasion (wedding, party, corporate), acoustic piano availability or digital keyboard needed..." required></textarea>
+                    </div>
+
+                    <button type="submit" id="submitQuoteBtn" class="btn-primary btn-submit mt-1">
+                        <span id="submitBtnText">Send Quote Request</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- CORE EXECUTION RUNTIME JAVASCRIPT ENGINE -->
+    <script>
+        // Clean mobile menu hamburger toggle drawer open/close mechanics
+        document.getElementById('menuBtn').addEventListener('click', () => {
+            document.getElementById('menuBtn').classList.toggle('open');
+            document.getElementById('navMenu').classList.toggle('mobile-open');
+        });
+
+        // Unified asynchronous tour schedule processor pipeline
+        async function hydrateTourSchedule() {
+            try {
+                const response = await fetch('gigs.json');
+                if (!response.ok) throw new Error('Network data response cycle timed out');
+                const publicGigs = await response.json();
+                
+                const tableContainer = document.getElementById('gigTableBody');
+                if (!tableContainer) return;
+                tableContainer.innerHTML = ''; 
+
+                if (publicGigs.length === 0) {
+                    tableContainer.innerHTML = '<p class="text-muted" style="padding: 2rem; text-align: center;">No current public performances scheduled for this segment.</p>';
+                    return;
+                }
+
+                publicGigs.forEach(gig => {
+                    const rowFrame = document.createElement('div');
+                    rowFrame.className = 'table-row piano-item-row';
+                    
+                    // Structural Validation Check for Venue Tracking Links
+                    const venueOutputMarkup = gig.venue_url && gig.venue_url.trim() !== "" 
+                        ? `<a href="${gig.venue_url}" target="_blank" style="text-decoration: underline; color: var(--accent); font-weight: 700;">${gig.venue} ↗</a>` 
+                        : `<span style="font-weight: 600; color: var(--text-main);">${gig.venue}</span>`;
+
+                    rowFrame.innerHTML = `
+                        <div data-label="Date"><strong>${gig.date}</strong></div>
+                        <div data-label="Venue">${venueOutputMarkup}</div>
+                        <div data-label="City" class="text-muted">${gig.city}</div>
+                        <div data-label="State" class="text-muted" style="font-weight: 600;">${gig.state}</div>
+                        <div data-label="Hours" style="font-size: 0.9rem; white-space: nowrap;">${gig.hours}</div>
+                        <div data-label="Group"><span class="text-highlight" style="font-size: 0.9rem;">${gig.group_name}</span></div>
+                        <div data-label="Performance Notes" style="font-size: 0.85rem; line-height: 1.4; color: var(--text-muted); text-align: left;">${gig.description}</div>
+                    `;
+                    tableContainer.appendChild(rowFrame);
+                });
+            } catch (err) {
+                console.error('Failed processing dynamic tour registry parsing tracking matrix:', err);
+                const tableContainer = document.getElementById('gigTableBody');
+                if (tableContainer) {
+                    tableContainer.innerHTML = '<p style="color: var(--danger); padding: 2rem; text-align: center;">Error running database performance lookup tracks.</p>';
+                }
+            }
+        }
+
+        // Live Music Modal Handling
+        const quoteModal = document.getElementById('quoteModal');
+        const openQuoteBtn = document.getElementById('openQuoteBtn');
+        const closeQuoteModal = document.getElementById('closeQuoteModal');
+        const quoteForm = document.getElementById('liveMusicQuoteForm');
+        const submitQuoteBtn = document.getElementById('submitQuoteBtn');
+        const submitBtnText = document.getElementById('submitBtnText');
+        const formAlertSuccess = document.getElementById('formAlertSuccess');
+        const formAlertError = document.getElementById('formAlertError');
+
+        function openModal() {
+            if (!quoteModal) return;
+            quoteModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            if (formAlertSuccess) formAlertSuccess.style.display = 'none';
+            if (formAlertError) formAlertError.style.display = 'none';
+            const firstInput = document.getElementById('clientName');
+            if (firstInput) firstInput.focus();
+        }
+
+        function closeModal() {
+            if (!quoteModal) return;
+            quoteModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        if (openQuoteBtn) {
+            openQuoteBtn.addEventListener('click', openModal);
+        }
+
+        if (closeQuoteModal) {
+            closeQuoteModal.addEventListener('click', closeModal);
+        }
+
+        if (quoteModal) {
+            quoteModal.addEventListener('click', (e) => {
+                if (e.target === quoteModal) {
+                    closeModal();
+                }
+            });
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && quoteModal && quoteModal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        if (quoteForm) {
+            quoteForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                if (formAlertSuccess) formAlertSuccess.style.display = 'none';
+                if (formAlertError) formAlertError.style.display = 'none';
+                if (submitQuoteBtn) submitQuoteBtn.disabled = true;
+                if (submitBtnText) submitBtnText.textContent = 'Sending Inquiry...';
+
+                const formData = new FormData(quoteForm);
+                const jsonData = Object.fromEntries(formData.entries());
+
+                try {
+                    const response = await fetch('https://formsubmit.co/ajax/brad@smithpiano.com', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify(jsonData)
+                    });
+
+                    if (response.ok) {
+                        if (formAlertSuccess) formAlertSuccess.style.display = 'block';
+                        quoteForm.reset();
+                        if (submitBtnText) submitBtnText.textContent = 'Inquiry Sent!';
+                        setTimeout(() => {
+                            if (submitQuoteBtn) submitQuoteBtn.disabled = false;
+                            if (submitBtnText) submitBtnText.textContent = 'Send Quote Request';
+                        }, 4000);
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                } catch (err) {
+                    console.error('Error submitting live music quote inquiry:', err);
+                    if (formAlertError) formAlertError.style.display = 'block';
+                    if (submitQuoteBtn) submitQuoteBtn.disabled = false;
+                    if (submitBtnText) submitBtnText.textContent = 'Send Quote Request';
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', hydrateTourSchedule);
+    </script>
+</body>
+</html>
