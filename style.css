@@ -83,7 +83,7 @@ header {
 }
 
 .header-logo {
-  height: 52px;
+  height: 70px;
   width: auto;
   object-fit: contain;
   transition: var(--transition);
