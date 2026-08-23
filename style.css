@@ -83,8 +83,6 @@ header {
 }
 
 .header-logo {
-  border: 1px solid green;
-  border-radius: 5px;
   height: 70px;
   width: auto;
   object-fit: contain;
