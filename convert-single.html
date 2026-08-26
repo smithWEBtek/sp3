@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private ICS to EspoCRM CSV Converter</title>
+     <link rel="stylesheet" href="/styles/convert.css" />
+</head>
+<body>
+
+    <h1>Convert single ICS file to CSV for EspoCRM</h1>
+    
+    <!-- Drag and Drop Target -->
+    <div id="drop-zone">
+        <p>Drag & drop your <strong>.ics</strong> file here, or click to browse</p>
+        <input type="file" id="file-input" accept=".ics">
+    </div>
+
+    <div id="status"></div>
+
+    <script>
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+        const statusDiv = document.getElementById('status');
+
+        dropZone.addEventListener('click', () => fileInput.click());
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                dropZone.classList.add('hover');
+            }, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                dropZone.classList.remove('hover');
+            }, false);
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            if (files && files.length > 0) handleFile(files[0]);
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            const files = e.target.files;
+            if (files && files.length > 0) handleFile(files[0]);
+        });
+
+        function handleFile(file) {
+            if (!file) return;
+            
+            statusDiv.style.color = "#16a34a";
+            statusDiv.textContent = `Processing: ${file.name}...`;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const icsText = e.target.result;
+                    const csvText = convertIcsToEspoCSV(icsText);
+                    
+                    downloadCSV(csvText, file.name.replace('.ics', '_contacts_for_espo.csv'));
+                    statusDiv.textContent = "Success! CSV downloaded.";
+                } catch (err) {
+                    console.error(err);
+                    statusDiv.style.color = "#dc2626";
+                    statusDiv.textContent = "Error parsing file format.";
+                }
+            };
+            
+            reader.readAsText(file);
+        }
+
+        function convertIcsToEspoCSV(icsText) {
+            // Precise internal system Field Names used for effortless auto-mapping 
+            const headers = [
+                "name", 
+                "cFullName", 
+                "firstName", 
+                "lastName", 
+                "phoneNumber", 
+                "emailAddress", 
+                "addressStreet", 
+                "addressCity", 
+                "addressPostalCode", 
+                "addressState", 
+                "cPianoBrand", 
+                "cPianoType", 
+            ];
+            const csvRows = [headers.join(",")];
+
+            const eventBlocks = icsText.split(/END:VEVENT/i);
+
+            eventBlocks.forEach(block => {
+                if (!block.includes("BEGIN:VEVENT")) return;
+
+                let fullName = "";
+                let emailAddress = "";
+                let phoneNumber = "";
+                let pianoBrand = "";
+                let pianoType = "";
+
+                // Unfold line breaks safely
+                const normalizedBlock = block.replace(/\r?\n\s/g, '').replace(/\\n/g, '\n');
+
+                const nameMatch = normalizedBlock.match(/Name:\s*(.*)/i);
+                const emailMatch = normalizedBlock.match(/E-mail:\s*(.*)/i);
+                const phoneMatch = normalizedBlock.match(/Phone:\s*(.*)/i);
+                const addressMatch = normalizedBlock.match(/Address:\s*(.*)/i);
+                const brandMatch = normalizedBlock.match(/Brand:\s*(.*)/i);
+                const typeMatch = normalizedBlock.match(/Type:\s*(.*)/i);
+                
+                const descMatch = normalizedBlock.match(/DESCRIPTION:([\s\S]*?)(?:LAST-MODIFIED|DTSTAMP|SUMMARY|PRIORITY|CLASS|CREATED|URL|END:VEVENT)/i);
+                let rawDescription = descMatch ? descMatch[0].trim() : "";
+
+                if (nameMatch) fullName = nameMatch[1].trim();
+                if (emailMatch) emailAddress = emailMatch[1].trim();
+                if (phoneMatch) phoneNumber = phoneMatch[1].trim();
+                if (addressMatch) rawAddress = addressMatch[1].trim();
+                if (brandMatch) pianoBrand = brandMatch[1].trim();
+                if (typeMatch) pianoType = typeMatch[1].trim();
+
+                if (!fullName && !emailAddress && !phoneNumber) return;
+
+                let firstName = "";
+                let lastName = "";
+                const nameParts = fullName.split(' ');
+                if (nameParts.length > 1) {
+                    firstName = nameParts.shift();
+                    lastName = nameParts.join(' ');
+                } else {
+                    lastName = fullName;
+                }
+
+                let street = "";
+                let city = "";
+                let state = "";
+                let zip = "";
+
+                if (rawAddress) {
+                    const addressParts = rawAddress.split(',');
+                    if (addressParts.length >= 3) {
+                        street = addressParts[0].trim();
+                        city = addressParts[1].trim();
+                        
+                        const remainder = addressParts.slice(2).join(',').trim();
+                        const remainderParts = remainder.split(/\s+/);
+                        
+                        if (remainderParts.length >= 3) {
+                            state = remainderParts[0].trim();
+                            zip = remainderParts[1].trim();
+                        } else if (remainderParts.length === 2) {
+                            state = remainderParts[0].trim();
+                            zip = remainderParts[1].trim();
+                        } else {
+                            state = remainder;
+                        }
+                    } else {
+                        street = rawAddress;
+                    }
+                }
+
+                const escapeCSV = (text) => {
+                    if (!text) return '""';
+                    return `"${text.replace(/"/g, '""')}"`;
+                };
+
+                csvRows.push([
+                    escapeCSV(fullName),       // name (Espo core visual identifier)
+                    escapeCSV(fullName),       // cFullName
+                    escapeCSV(firstName),      // firstName
+                    escapeCSV(lastName),       // lastName
+                    escapeCSV(phoneNumber),    // phoneNumber
+                    escapeCSV(emailAddress),   // emailAddress
+                    escapeCSV(street),         // addressStreet
+                    escapeCSV(city),           // addressCity
+                    escapeCSV(zip),            // addressPostalCode
+                    escapeCSV(state),          // addressState
+                    escapeCSV(pianoBrand),     // cPianoBrand
+                    escapeCSV(pianoType),      // cPianoType
+                ].join(","));
+            });
+
+            return csvRows.join("\n");
+        }
+
+        function downloadCSV(csvText, filename) {
+            const blob = new Blob([csvText], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement("a");
+            const url = URL.createObjectURL(blob);
+            
+            link.setAttribute("href", url);
+            link.setAttribute("download", filename);
+            link.style.visibility = 'hidden';
+            
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
