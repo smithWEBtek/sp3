@@ -856,3 +856,50 @@ textarea.form-control {
     padding: 1.25rem 1.25rem;
   }
 }
+
+/* live music sub-menu styles
+/* Smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Sub-menu container styling */
+.live-music-submenu {
+  position: sticky;
+  top: 0; /* Adjust this if you already have a sticky main header */
+  background-color: #ffffff;
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  text-align: center;
+}
+
+/* Horizontal list layout */
+.live-music-submenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  gap: 15px;
+}
+
+/* Sub-menu links designed as nice-looking pills */
+.live-music-submenu a {
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+  background-color: var(--moss-green);
+}
+
+/* Hover effects */
+.live-music-submenu a:hover {
+  background-color: #255f29;
+  color: #ffffff;
+  border-color: #333333;
+}
