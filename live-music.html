@@ -26,12 +26,18 @@
         </ul>
         </nav>
     </header>
-
     <main>
+
+        
         <!-- MASTER PAGE TITLE -->
         <div style="margin-bottom: 2.5rem; border-bottom: 1px solid rgba(44, 39, 54, 0.1); padding-bottom: 1rem;">
-            <h2 style="font-size: 2.2rem; margin-top: 0.2rem;">Live Performances & Gigs</h2>
-            <p >We thrive on making musical memories and can't do it without you!</p>
+            <nav class="live-music-submenu">
+            <ul>
+                <li><a href="#schedule">Upcoming Performances</a></li>
+                <li><a href="#combos">Live Music Combos for Hire</a></li>
+                <li><a href="#examples">Audio & Video examples</a></li>
+            </ul>
+            </nav>
         </div>
         <div style="max-width: 850px">
           <h1>Brad Smith</h1>
@@ -44,34 +50,32 @@
             <br> 
             <br>Brad has recorded as a sideman on several albums with many of the great players in Boston and New York and is available for performing, touring and recording anywhere in the
             world.
-
             <br>Brad plays in a variety of musical groups in the Boston area both as leader and sideman.
-            <br>
-            <br>
         </div>
 
                 <!-- DYNAMIC DATA-DRIVEN TOUR LAYOUT GRID STRUCTURE -->
-        <div style="margin-top: 3rem; margin-bottom: 1.5rem;">
-            <h3 style="color: var(--twilight-indigo); font-size: 1.4rem;">📅 Upcoming Performance Schedule</h3>
+        <br id="schedule">
+        <div class="section-divider" style="margin-top: 3rem; margin-bottom: 1rem;">
+            <h3 style="color: var(--twilight-indigo); margin-bottom: 1rem; font-size: 1.4rem;">📅 Upcoming Performances</h3>
         </div>
         <!-- DUAL ARCHITECTURE: GOOGLE CALENDAR EMBED MATRIX & EMAIL CONVERSION -->
         <div class="grid-1x" style="margin-top: 2rem;">
             <!-- RIGHT MODULE: GOOGLE CALENDAR COMPONENT CONTAINER -->
             <div class="card" style="background-color: #ffffff; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <h3>Brad Smith GIGS Calendar</h3>
-                </div>
-                
                 <!-- Google Calendar Embed Frame -->
                 <div style="width: 100%; overflow-x: auto; border: 1px solid rgba(55, 60, 96, 0.15); border-radius: 4px;">
                     <iframe src="https://calendar.google.com/calendar/embed?src=c_e0c52e8a02a5265d9dd2536fd336e0ae6a04081c9a1682186db5c3a24028f07d%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="100%" height="450" frameborder="0" scrolling="no"></iframe>
                 </div>
             </div>
         </div>
-
+        
         <!-- PERFORMANCE PACKAGES / BOOKING TIERS -->
-        <h3 style="color: var(--twilight-indigo); margin-bottom: 1rem; font-size: 1.4rem;">🎹 Live Music combinations for hire</h3>
+        <br id="combos">
+        <br>
+        <br>
+        <br>
         <div class="grid-1x mb-1">
+            <h3 style="color: var(--twilight-indigo); margin-bottom: 1rem; font-size: 1.4rem;">🎹 Live Music combos for hire</h3>
             <div class="card">
                 <h3>Yacht Cha Cha</h3>
                 <p  >Keys, guitar & percussion trio: Latinized & funkified jazz, pop, funk and "yacht rock" tunes (vocals optional). <p><b>Creates a backdrop for mingling (at any volume) and you can dance when you feel it!</b></p></p>
@@ -165,10 +169,13 @@
         <!-- ==========================================================================
              MUSICIAN BIO & FEATURED SAMPLES
              ========================================================================== -->
+        <br id="examples">
         <div class="section-divider">
-            <h3 style="color: var(--twilight-indigo); margin-bottom: 1rem; font-size: 1.4rem;">🎹 Live performance audio & video samples</h3>
+            <h3 style="color: var(--twilight-indigo); margin-bottom: 1rem; font-size: 1.4rem;">🎹 Audio & Video examples</h3>
             <p  mt-1" style="max-width: 950px; font-size: 1rem; line-height: 1.6;">
-                Brad Smith is a veteran keyboardist of funk and Latin music in Boston. He has worked as a show band pianist on cruise ships, accompanying a wide range of vocalists from jazz and classical to R&B and contemporary. His musical loves are funk and old-school Salsa. He has recorded as a sideman on eight albums and has been fortunate to work with many of the great players in Boston and New York. Brad is available for performing, touring, and recording anywhere in the world.
+                These are live recordings of various gigs. 
+                <br>Keep in mind that we are playing for the people and the room where we are hired. 
+                <br>When we play at your event, we will work with you to control the volume and content.
             </p>
         </div>
 
@@ -516,51 +523,6 @@
             document.getElementById('navMenu').classList.toggle('mobile-open');
         });
 
-        // Unified asynchronous tour schedule processor pipeline
-        async function hydrateTourSchedule() {
-            try {
-                const response = await fetch('gigs.json');
-                if (!response.ok) throw new Error('Network data response cycle timed out');
-                const publicGigs = await response.json();
-                
-                const tableContainer = document.getElementById('gigTableBody');
-                if (!tableContainer) return;
-                tableContainer.innerHTML = ''; 
-
-                if (publicGigs.length === 0) {
-                    tableContainer.innerHTML = '<p  style="padding: 2rem; text-align: center;">No current public performances scheduled for this segment.</p>';
-                    return;
-                }
-
-                publicGigs.forEach(gig => {
-                    const rowFrame = document.createElement('div');
-                    rowFrame.className = 'table-row piano-item-row';
-                    
-                    // Structural Validation Check for Venue Tracking Links
-                    const venueOutputMarkup = gig.venue_url && gig.venue_url.trim() !== "" 
-                        ? `<a href="${gig.venue_url}" target="_blank" style="text-decoration: underline; color: var(--accent); font-weight: 700;">${gig.venue} ↗</a>` 
-                        : `<span style="font-weight: 600; color: var(--text-main);">${gig.venue}</span>`;
-
-                    rowFrame.innerHTML = `
-                        <div data-label="Date"><strong>${gig.date}</strong></div>
-                        <div data-label="Venue">${venueOutputMarkup}</div>
-                        <div data-label="City" >${gig.city}</div>
-                        <div data-label="State"  style="font-weight: 600;">${gig.state}</div>
-                        <div data-label="Hours" style="white-space: nowrap;">${gig.hours}</div>
-                        <div data-label="Group"><span class="text-highlight" style="font-size: 0.9rem;">${gig.group_name}</span></div>
-                        <div data-label="Performance Notes" style="font-size: 0.85rem; line-height: 1.4; color: var(--text-muted); text-align: left;">${gig.description}</div>
-                    `;
-                    tableContainer.appendChild(rowFrame);
-                });
-            } catch (err) {
-                console.error('Failed processing dynamic tour registry parsing tracking matrix:', err);
-                const tableContainer = document.getElementById('gigTableBody');
-                if (tableContainer) {
-                    tableContainer.innerHTML = '<p style="color: var(--danger); padding: 2rem; text-align: center;">Error running database performance lookup tracks.</p>';
-                }
-            }
-        }
-
         // Live Music Modal Handling
         const quoteModal = document.getElementById('quoteModal');
         const openQuoteBtn = document.getElementById('openQuoteBtn');
@@ -650,7 +612,7 @@
             });
         }
 
-        document.addEventListener('DOMContentLoaded', hydrateTourSchedule);
+        document.addEventListener('DOMContentLoaded', null);
     </script>
 </body>
 </html>
