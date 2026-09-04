@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    // Simple access control snippet
+    (function() {
+        const correctPassword = "pembroke"; // Change this to your desired password
+        let sessionAuth = sessionStorage.getItem('studio_auth');
+
+        while (sessionAuth !== correctPassword) {
+            const entry = prompt("Please enter your Studio Access Password:");
+            
+            // If they click cancel, redirect them back to your main charts page
+            if (entry === null) {
+                window.location.href = "https://smithpiano.com";
+                break;
+            }
+            
+            if (entry === correctPassword) {
+                sessionStorage.setItem('studio_auth', correctPassword);
+                break;
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Studio Client Portal | Brad Smith Piano</title>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div>
+            <h1>Studio Client Workspace</h1>
+            <p>Project: <strong>Song Title / Arrangement Draft</strong></p>
+        </div>
+        <div>
+            <a href="https://smithpiano.com" style="color: var(--primary); text-decoration: none; font-weight: bold;">← smithpiano.com</a>
+        </div>
+    </header>
+
+    <div class="grid">
+        <!-- LEFT COLUMN: Chart Review (Req 1) -->
+        <div class="card">
+            <h2>1. Review Chart Draft</h2>
+            <!-- Replaces bulky paper with clean, zoomable performance layout -->
+            <iframe class="pdf-viewer" src="assets/draft_chart.pdf#toolbar=0"></iframe>
+        </div>
+
+        <!-- RIGHT COLUMN: Audio Reference & Feedback (Req 2, 3, 4, 5, 6) -->
+        <div class="grid-sidebar" style="display: flex; flex-direction: column; gap: 30px;">
+            
+            <!-- Audio Reference Center -->
+            <div class="card">
+                <h2>2. Audio References</h2>
+                
+                <!-- Original Audio Reference (Req 3) -->
+                <div class="audio-group">
+                    <label>Original Reference Track</label>
+                    <audio controls src="assets/original.mp3"></audio>
+                </div>
+
+                <!-- MuseScore Export (Req 4) -->
+                <div class="audio-group">
+                    <label>MuseScore Playback Draft</label>
+                    <audio controls src="assets/musescore_draft.mp3"></audio>
+                </div>
+            </div>
+
+            <!-- Client Feedback and Audio Notes -->
+            <div class="card">
+                <h2>3. Rehearsal & Layout Notes</h2>
+                
+                <!-- Voice Notes Recorder (Req 5) -->
+                <div style="margin-bottom: 25px;">
+                    <label style="display:block; font-weight:bold; margin-bottom:8px;">Record Arrangement Notes</label>
+                    <p style="font-size:0.85rem; margin:0 0 10px 0; color:#666;">Talk through structural edits, hits, or rhythmic changes over the arrangement.</p>
+                    <div class="recorder-controls">
+                        <button id="startRec" class="btn btn-accent">Record</button>
+                        <button id="stopRec" class="btn" disabled>Stop</button>
+                    </div>
+                    <div id="recStatus" class="recording-status">🔴 Recording audio...</div>
+                    <audio id="audioPlayback" controls style="display:none; margin-top:10px;"></audio>
+                </div>
+
+                <!-- Text Comments (Req 2) -->
+                <form action="upload_handler.php" method="POST" enctype="multipart/form-data">
+                    <label style="display:block; font-weight:bold; margin-bottom:8px;">Written Corrections</label>
+                    <textarea name="comments" placeholder="e.g., 'In the bridge, make the chord symbols major 7ths instead of triads. Let's add a 4-bar vamp at rehearsal letter C...'"></textarea>
+                    
+                    <!-- File Upload Input (Req 6) -->
+                    <label style="display:block; font-weight:bold; margin-bottom:8px;">Upload Audio / Reference Assets</label>
+                    <div class="upload-box" onclick="document.getElementById('fileInput').click()">
+                        <span id="uploadText">Drag files here or click to browse</span>
+                        <input type="file" id="fileInput" name="client_files[]" multiple style="display: none;" onchange="updateUploadStatus()">
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%; margin-top: 20px;">Submit Feedback & Files</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    // Pure Javascript browser voice recorder (Req 5)
+    let mediaRecorder;
+    let audioChunks = [];
+    const startBtn = document.getElementById('startRec');
+    const stopBtn = document.getElementById('stopRec');
+    const statusDiv = document.getElementById('recStatus');
+    const playback = document.getElementById('audioPlayback');
+
+    startBtn.addEventListener('click', async () => {
+        audioChunks = [];
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        mediaRecorder = new MediaRecorder(stream);
+        
+        mediaRecorder.ondataavailable = event => {
+            audioChunks.push(event.data);
+        };
+
+        mediaRecorder.onstop = () => {
+            const audioBlob = new Blob(audioChunks, { type: 'audio/mp3' });
+            const audioUrl = URL.createObjectURL(audioBlob);
+            playback.src = audioUrl;
+            playback.style.display = 'block';
+            
+            // To attach this recorded clip to your form dynamically:
+            const file = new File([audioBlob], "client_voice_note.mp3", {type:"audio/mp3"});
+            const container = new DataTransfer();
+            container.items.add(file);
+            document.getElementById('fileInput').files = container.files;
+            updateUploadStatus();
+        };
+
+        mediaRecorder.start();
+        startBtn.disabled = true;
+        stopBtn.disabled = false;
+        statusDiv.style.display = 'flex';
+    });
+
+    stopBtn.addEventListener('click', () => {
+        mediaRecorder.stop();
+        startBtn.disabled = false;
+        stopBtn.disabled = true;
+        statusDiv.style.display = 'none';
+    });
+
+    function updateUploadStatus() {
+        const input = document.getElementById('fileInput');
+        const label = document.getElementById('uploadText');
+        if(input.files.length > 0) {
+            label.innerText = `${input.files.length} file(s) attached and ready to send.`;
+        }
+    }
+</script>
+</body>
+</html>
